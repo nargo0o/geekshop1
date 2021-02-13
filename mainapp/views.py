@@ -7,9 +7,7 @@ from .models import Contact, Product, ProductCategory
 
 def main(request):
     title = "главная"
-
     products = Product.objects.all()[:4]
-
     content = {"title": title, "products": products, "media_url": settings.MEDIA_URL}
     return render(request, "mainapp/index.html", content)
 
@@ -27,6 +25,7 @@ def products(request, pk=None):
     if pk:
         print(f"User select category: {pk}")
     return render(request, "mainapp/products.html", content)
+
 
 
 def contact(request):
