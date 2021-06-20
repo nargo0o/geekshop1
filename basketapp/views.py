@@ -1,7 +1,7 @@
 from django.shortcuts import HttpResponseRedirect, get_object_or_404, render
-from mainapp.models import Product
 
 from basketapp.models import Basket
+from mainapp.models import Product
 
 
 def basket(request):
