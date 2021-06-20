@@ -2,16 +2,12 @@ from django.db import migrations
 
 
 def forwards_func(apps, schema_editor):
-    pro_cat_model = apps.get_model(
-        "mainapp", "ProductCategory"
-    )  # Load model for make changes
+    pro_cat_model = apps.get_model("mainapp", "ProductCategory")  # Load model for make changes
     pro_model = apps.get_model("mainapp", "Product")  # Load model for make changes
     con_model = apps.get_model("mainapp", "Contact")  # Load model for make changes
 
     # Create new category
-    pro_cat_obj = pro_cat_model.objects.create(
-        pk=1, name="дом", description="отличная мебель для домашнего интерьера."
-    )
+    pro_cat_obj = pro_cat_model.objects.create(pk=1, name="дом", description="отличная мебель для домашнего интерьера.")
     # Create new products in this category
     pro_model.objects.create(
         pk=1,
@@ -166,9 +162,7 @@ def forwards_func(apps, schema_editor):
 
 
 def reverse_func(apps, schema_editor):
-    pro_cat_model = apps.get_model(
-        "mainapp", "ProductCategory"
-    )  # Load model for make changes
+    pro_cat_model = apps.get_model("mainapp", "ProductCategory")  # Load model for make changes
     con_model = apps.get_model("mainapp", "Contact")  # Load model for make changes
 
     # Delete all objects
