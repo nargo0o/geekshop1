@@ -48,9 +48,7 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "quantity",
-                    models.PositiveIntegerField(
-                        default=0, verbose_name="количество на складе"
-                    ),
+                    models.PositiveIntegerField(default=0, verbose_name="количество на складе"),
                 ),
                 (
                     "category",
